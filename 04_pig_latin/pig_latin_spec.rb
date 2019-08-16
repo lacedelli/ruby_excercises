@@ -68,5 +68,14 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+ it "converts capitalization" do
+	 s = translate("Sovereign")
+	 expect(s).to eq("Overeignsay")
+ end
 
+ it "keeps punctuation" do
+   s = translate("Alas, poor Yorick!")
+   expect(s).to eq("Alasay, oorpay Orickyay!")
+ end
 end
+
